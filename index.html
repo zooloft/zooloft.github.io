@@ -1,11 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <title>Task List Tool</title>
 </head>
+
 <body>
-    <p>Hello world!</p>
+
+
+    <h1>New Task</h1>
+
+    <!-- START Form -->
+
+    <form>
+
+        <div class="container">
+            <div class="form-row">
+                <div class="col-12">
+
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6  col-sm-12">
+                    <div class="form-group">
+                        <label for="task-name" class="form-label">Task Name</label>
+                        <input type="text" class="form-control" id="task-name" aria-describedby="taskname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-description">Task Description</label>
+                        <textarea class="form-control" id="task-description" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="assigned-to" class="form-label">Assigned To</label>
+                        <input type="text" class="form-control" id="assigned-to" aria-describedby="assigned to">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="due-date" class="form-label">Due Date</label>
+                        <input type="date" class="form-control" id="due-date" name="due-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-status">Status</label>
+                        <select class="form-control" id="form-status">
+                            <option selected value="To Do">To Do</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Review">Review</option>
+                            <option value="Done">Done</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-12">
+                    <button class="btn btn-primary btn-block" type="submit">Create New Task</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- END Form -->
+
+    <h1>Task List</h1>
+
+    <ul class="list-group list-group-horizontal list-group-flush">
+        <li class="list-group-item">
+            <div class="card">
+                <div class="card-body container">
+
+                    <div class="row">
+                        <div class="col-7">
+                            <h5 class="card-title">Pick up Groceries</h5>
+                            <p class="card-text">Go to QFC to pick up online order. Pay on site. Make sure you get
+                                vanilla icereams.
+                            </p>
+                        </div>
+                        <div class="col-5">
+                            <strong>DUE:</strong> 1/11/21
+
+                            <br><button type="button" class="btn btn-danger btn-sm btn-block">TO DO</button>
+
+                            <br><strong>ASSIGNED TO:</strong>
+                            <br>Joe Shmoe</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 buttonrow">
+                            <button type="button" class="btn btn-outline-warning btn-sm">In Progress</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">Review</button>
+                            <button type="button" class="btn btn-outline-success btn-sm">Done</button>
+                            <a href="deletetask.html" alt="Delete Task"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="22" height="22" fill="currentColor" class="bi bi-trash-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div class="card">
+                <div class="card-body container">
+
+                    <div class="row">
+                        <div class="col-7">
+                            <h5 class="card-title">Walk the dog</h5>
+                            <p class="card-text">At least 3 miles, bring ball and baggies.
+                            </p>
+                        </div>
+                        <div class="col-5">
+                            <strong>DUE:</strong> 1/12/21
+
+                            <br><button type="button" class="btn btn-warning btn-sm btn-block">IN PROGRESS</button>
+
+                            <br><strong>ASSIGNED TO:</strong>
+                            <br>Ben Boulder</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 buttonrow">
+                            <button type="button" class="btn btn-outline-danger btn-sm">To Do</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">Review</button>
+                            <button type="button" class="btn btn-outline-success btn-sm">Done</button>
+                            <a href="deletetask.html" alt="Delete Task"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="22" height="22" fill="currentColor" class="bi bi-trash-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div class="card">
+                <div class="card-body container">
+
+                    <div class="row">
+                        <div class="col-7">
+                            <h5 class="card-title">Do laundry</h5>
+                            <p class="card-text">Wash lights separately, separate reds from other colors.
+                            </p>
+                        </div>
+                        <div class="col-5">
+                            <strong>DUE:</strong> 2/11/21
+
+                            <br><button type="button" class="btn btn-info btn-sm btn-block">REVIEW</button>
+
+                            <br><strong>ASSIGNED TO:</strong>
+                            <br>
+                            <p>Mary Dairy</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 buttonrow">
+                            <button type="button" class="btn btn-outline-danger btn-sm">To Do</button>
+                            <button type="button" class="btn btn-outline-warning btn-sm">In Progress</button>
+                            <button type="button" class="btn btn-outline-success btn-sm">Done</button>
+                            <a href="deletetask.html" alt="Delete Task"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="22" height="22" fill="currentColor" class="bi bi-trash-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div class="card">
+                <div class="card-body container">
+
+                    <div class="row">
+                        <div class="col-7">
+                            <h5 class="card-title">Wash Dishes</h5>
+                            <p class="card-text">Hand wash, dry, and store dishes.
+                            </p>
+                        </div>
+                        <div class="col-5">
+                            <strong>DUE:</strong> 2/21/21
+
+                            <br><button type="button" class="btn btn-success btn-sm btn-block">DONE</button>
+
+                            <br><strong>ASSIGNED TO:</strong>
+                            <br>Sarah Smith</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 buttonrow">
+                            <button type="button" class="btn btn-outline-danger btn-sm">To Do</button>
+                            <button type="button" class="btn btn-outline-warning btn-sm">In Progress</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">Review</button>
+                            <a href="deletetask.html" alt="Delete Task"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="22" height="22" fill="currentColor" class="bi bi-trash-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div class="card">
+                <div class="card-body container">
+
+                    <div class="row">
+                        <div class="col-7">
+                            <h5 class="card-title">Final Project</h5>
+                            <p class="card-text">Work on task 3 with group.
+                            </p>
+                        </div>
+                        <div class="col-5">
+                            <strong>DUE:</strong> 3/15/21
+
+                            <br><button type="button" class="btn btn-danger btn-sm btn-block">TO DO</button>
+
+                            <br><strong>ASSIGNED TO:</strong>
+                            <br>John Doe</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 buttonrow">
+                            <button type="button" class="btn btn-outline-warning btn-sm">In Progress</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">Review</button>
+                            <button type="button" class="btn btn-outline-success btn-sm">Done</button>
+                            <a href="deletetask.html" alt="Delete Task"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="22" height="22" fill="currentColor" class="bi bi-trash-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
